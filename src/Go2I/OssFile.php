@@ -6,7 +6,7 @@
  * Time: 下午11:07
  */
 
-namespace Go2i;
+namespace Go2i\Sabre\AliyunOSS;
 
 
 use OSS\Model\ObjectInfo;

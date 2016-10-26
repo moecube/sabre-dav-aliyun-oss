@@ -8,7 +8,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Go2i\\": "src/Go2i"
+      "Go2i\\Sabre\\AliyunOSS": "src/Go2i"
     }
   }
 }

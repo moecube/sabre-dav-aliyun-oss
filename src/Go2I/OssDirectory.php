@@ -1,6 +1,6 @@
 <?php
 
-namespace Go2i;
+namespace Go2i\Sabre\AliyunOSS;
 
 use OSS\Core\OssException;
 use OSS\Model\ObjectInfo;

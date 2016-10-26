@@ -6,7 +6,7 @@
  * Time: 下午2:31
  */
 
-namespace Go2i;
+namespace Go2i\Sabre\AliyunOSS;
 
 
 class OssClientConfig

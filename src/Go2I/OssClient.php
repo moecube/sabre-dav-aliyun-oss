@@ -6,11 +6,14 @@
  * Time: 下午2:33
  */
 
-namespace Go2i;
+namespace Go2i\Sabre\AliyunOSS;
 
 
 class OssClient
 {
+    /**
+     * @var \OSS\OssClient
+     */
     private static $client;
 
     public static $bucket = 'go2i-home';
