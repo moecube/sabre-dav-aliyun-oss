@@ -1,8 +1,14 @@
 {
-    "require": {
-        "sabre/dav": "^3.2",
-        "aliyuncs/oss-sdk-php": "^2.0",
-        "league/flysystem": "^1.0",
-        "monster/flysystem-aliyun-oss": "^1.0"
+  "require": {
+    "sabre/dav": "^3.2",
+    "aliyuncs/oss-sdk-php": "^2.0",
+    "league/flysystem": "^1.0",
+    "apollopy/flysystem-aliyun-oss": "^1.1",
+    "anahkiasen/underscore-php": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Go2i\\": "src/Go2i"
     }
+  }
 }
