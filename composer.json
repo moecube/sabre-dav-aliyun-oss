@@ -1,13 +1,13 @@
 {
   "require": {
+  },
+  "require-dev": {
     "sabre/dav": "^3.2",
-    "aliyuncs/oss-sdk-php": "^2.0",
-    "league/flysystem": "^1.0",
-    "apollopy/flysystem-aliyun-oss": "^1.1"
+    "aliyuncs/oss-sdk-php": "^2.0"
   },
   "autoload": {
     "psr-4": {
-      "Go2i\\Sabre\\AliyunOSS\\": "src/Go2i"
+      "Go2i\\Sabre\\AliyunOSS\\": "src"
     }
   }
 }
