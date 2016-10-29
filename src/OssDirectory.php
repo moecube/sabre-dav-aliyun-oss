@@ -61,12 +61,13 @@ class OssDirectory extends Collection implements DAV\ICollection, DAV\IQuota
     function getChild($node)
     {
         if (is_string($node)) {
+            $path = $this->directoryPath . $node;
 
             try {
-                $meta = OssClient::getClient()->getObjectMeta(OssClient::$bucket, $node);
+                $meta = OssClient::getClient()->getObjectMeta(OssClient::$bucket, $path);
                 return new OssFile($meta);
             } catch (OssException $e) {
-                return new static($node . '/');
+                return new static($path . '/');
             }
         }
 
@@ -184,6 +185,6 @@ class OssDirectory extends Collection implements DAV\ICollection, DAV\IQuota
      */
     function getQuotaInfo()
     {
-        // TODO: Implement getQuotaInfo() method.
+        return [PHP_INT_MAX, PHP_INT_MAX];
     }
 }
