@@ -119,18 +119,20 @@ class OssDirectory extends Collection implements DAV\ICollection, DAV\IQuota
             return null;
         }
 
+        $path = $this->directoryPath . $name;
+
         if (is_resource($data)) {
             $temp_file = tempnam(sys_get_temp_dir(), 'upload/');
             stream_copy_to_stream($data, fopen($temp_file, 'w'));
 
-            OssClient::getClient()->uploadFile(OssClient::$bucket, $name, $temp_file);
+            OssClient::getClient()->uploadFile(OssClient::$bucket, $path, $temp_file);
         }
 
         if (is_string($data)) {
-            OssClient::getClient()->putObject(OssClient::$bucket, $name, $data);
+            OssClient::getClient()->putObject(OssClient::$bucket, $path, $data);
         }
 
-        $object = OssClient::getClient()->getObjectMeta(OssClient::$bucket, $name);
+        $object = OssClient::getClient()->getObjectMeta(OssClient::$bucket, $path);
         return $object['etag'];
     }
 
