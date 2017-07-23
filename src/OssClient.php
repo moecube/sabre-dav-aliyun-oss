@@ -8,6 +8,7 @@
 
 namespace Go2i\Sabre\AliyunOSS;
 
+define('BUCKET', $_ENV['OSS_BUCKET']);
 
 class OssClient
 {
@@ -16,7 +17,7 @@ class OssClient
      */
     private static $client;
 
-    public static $bucket = 'go2i-home';
+    public static $bucket = BUCKET;
 
     public static function init(OssClientConfig $config)
     {
