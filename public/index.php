@@ -8,7 +8,7 @@ require '../vendor/autoload.php';
 Go2i\Sabre\AliyunOSS\OssClient::init(new Go2i\Sabre\AliyunOSS\OssClientConfig(
     $_ENV['OSS_ACCESS_ID'], $_ENV['OSS_ACCESS_KEY'], $_ENV['OSS_ENDPOINT']));
 
-$rootDirectory = new Go2i\Sabre\AliyunOSS\OssDirectory();
+$rootDirectory = new Go2i\Sabre\AliyunOSS\OssDirectory($_ENV['OSS_PREFIX']);
 $server = new DAV\Server($rootDirectory);
 
 $lockBackend = new DAV\Locks\Backend\File('../data/locks');
