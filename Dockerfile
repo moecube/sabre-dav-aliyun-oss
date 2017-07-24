@@ -1,9 +1,10 @@
 FROM php:fpm
 
 RUN apt-get update
-RUN apt-get install -y unzip git
+RUN apt-get install -y unzip git libpq-dev
 
 RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN docker-php-ext-install pdo_pgsql
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

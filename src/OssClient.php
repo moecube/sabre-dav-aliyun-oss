@@ -8,7 +8,7 @@
 
 namespace Go2i\Sabre\AliyunOSS;
 
-define('BUCKET', $_ENV['OSS_BUCKET']);
+define('BUCKET', getenv('OSS_BUCKET'));
 
 class OssClient
 {
